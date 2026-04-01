@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Find Your Ultimate | Ireland's Ultimate Frisbee Community Hub</title>
+</head>
+<body>
+<h1><b>Find Your Ultimate</b></h1>
+<br>
+<h2>Find Your Team</h1>
+<br>
+<h3>Find the local ultimate frisbee team for you by filling out the form below</h3>
+
+<div class="container">
+
+<label>First Name</label>
+<input type="text" id="fname" name="firstname" placeholder="Enter your name here">
+
+<label>Team type</label>
+<select id="teamType">
+<option value="Club">Club</option>
+<option value="College">College</option>
+</select>
+
+<label>Division</label>
+<select id="teamCat">
+<option value="Open">Open</option>
+<option value="Women">Women</option>
+<option value="Mixed">Mixed</option>
+</select>
+
+<button onclick="getLocation()">Find My Team</button>
+</div>
+<div id="displayResult"></div>
+<script src="script.js"></script>
+</body>
+</html>
