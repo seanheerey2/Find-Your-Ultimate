@@ -20,7 +20,7 @@ border-radius: 10px;}
 
 table {width: 100%; max-width: 1000px; margin: 20px auto;}
 td {padding: 15px;vertical-align: middle;}
-img {border-radius: 8px; width: 700px; max-width: 200px; margin: 0 auto; height: auto;}
+img {border-radius: 8px; width: 700px; max-width: 500px; margin: 0 auto; height: auto;}
 
 input, select {
 width: 100%;
