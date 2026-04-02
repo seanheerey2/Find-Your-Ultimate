@@ -19,9 +19,9 @@ h2 {color:#546e7a; font-size: 140%; letter-spacing: 2px}
 h3 {color:#546e7a; font-size: 180%; letter-spacing: 2px}
 p {color:#546e7a; font-family: Arial, sans-sarif; font weight: 1000%; font-size: 180%}
 
-table {width: 100%; max-width: 1000px; margin: 20px auto;}
+table {width: 100%; max-width: 1000px; margin: auto}
 td {padding: 15px;vertical-align: middle;}
-img {border-radius: 4px; width: 550px; max-width: 600px; margin: 0 auto; height: auto;}
+img {border-radius: 4px; "width: 100%; max-width: 450px;">; margin: 0 auto; height: auto;}
 
 .container {
 max-width: 400px; 
