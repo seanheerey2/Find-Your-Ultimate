@@ -1,62 +1,106 @@
+/* Apply this to everything to prevent padding from breaking widths */
+* {
+  box-sizing: border-box;
+}
+
 body {
-font-family: 'Arial Black', Arial, sans-serif;
-margin: 0;
-padding: 0;
-background-color: #f4f7f6;
-text-align: center;}
+  font-family: 'Arial Black', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f6;
+  text-align: center;
+  color: #546e7a;
+}
 
 h1 {
-color: #E5E4E2;
-background-color: #546e7a; 
-font-size: 500%; 
-letter-spacing: 2px;
-line-height: 1.1; /* Adjusted slightly so letters don't overlap on small screens */
-padding: 60px 20px;
-margin: 0; 
-text-align: center;}
+  color: #E5E4E2;
+  background-color: #546e7a; 
+  /* Scalable font size: 8vw means 8% of the screen width */
+  font-size: clamp(2.5rem, 8vw, 5rem); 
+  letter-spacing: 2px;
+  line-height: 1.2;
+  padding: 10% 5%; /* Relative padding looks better on all screens */
+  margin: 0; 
+  text-align: center;
+  text-transform: uppercase;
+}
 
-h2 {color:#546e7a; font-size: 140%; letter-spacing: 2px}
-h3 {color:#546e7a; font-size: 180%; letter-spacing: 2px}
-p {color:#546e7a; font-family: Arial, sans-sarif; font-weight: 1000; font-size: 180%}
+h2 { font-size: 1.5rem; letter-spacing: 1px; margin-top: 20px; }
+h3 { font-size: 1.8rem; letter-spacing: 1px; }
 
+p {
+  font-family: Arial, sans-serif; 
+  font-weight: 700; /* 1000 is often not supported; 700 is standard Bold */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+/* Layout Containers */
+.container {
+  width: 95%;
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #E5E4E2;
+  border-radius: 15px;
+  padding: 5%;
+}
 
 table {
-width: 95%;          
-max-width: 1200px;    
-margin: 20px auto;
-border-collapse: collapse;}
+  width: 100%;          
+  max-width: 1200px;    
+  margin: 20px auto;
+  border-collapse: collapse;
+}
 
 td {
-padding: 20px;
-vertical-align: middle;
-width: 50%;}
+  padding: 15px;
+  vertical-align: middle;
+}
 
 img {
-border-radius: 4px;
-width: 100%
-max-width: 600%;     
-height: auto;
-display: block;
-margin: 0 auto;}
+  border-radius: 8px;
+  width: 100%; /* Fixed missing semicolon here */
+  max-width: 100%; /* Changed from 600% to 100% to stay in bounds */
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
 
-.container {
-max-width: 800px;
-width: 90%;          
-margin: 40px auto;
-background-color: #E5E4E2;
-border-radius: 15px;
-padding: 40px;
-box-sizing: border-box;}
-
-input, select {width: 100%; box-sizing: border-box;}
-
+/* Media/Forms */
 iframe {
-width: 95%;
-max-width: 800px;
-height: auto;
-aspect-ratio: 16 / 9;}
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
 
+input, select {
+  width: 100%; 
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* --- Responsive Adjustments --- */
 
 @media screen and (max-width: 768px) {
-td {display: block;width: 100%;}
-h1 {font-size: 250%;}}
+  /* Stack table cells vertically on mobile */
+  td {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  h1 {
+    padding: 40px 10px;
+  }
+
+  .container {
+    padding: 20px;
+    margin: 20px auto;
+  }
+}
