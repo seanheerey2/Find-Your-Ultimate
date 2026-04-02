@@ -20,8 +20,12 @@ h3 {color:#546e7a; font-size: 180%; letter-spacing: 2px}
 p {color:#546e7a; font-family: Arial, sans-sarif; font weight: 1000%; font-size: 180%}
 
 table {width: 95%; max-width: 1000px; margin: auto;}
-td {padding: 15px;vertical-align: middle;}
-img {max-width: 100%; height: auto; display: block;}
+img {max-width: 100%; height: auto;}
+@media screen and (max-width: 768px) {
+td {display: block; 
+width: 100%;
+padding: 10px 0;
+text-align: center;}}
 
 .container {
 width: 95%;
