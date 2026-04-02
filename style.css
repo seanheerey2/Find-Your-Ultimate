@@ -67,4 +67,4 @@ padding: 15px;
 font-weight: bold;
 color: #333;}
 
-iframe{margin-bottom: 60px; padding: 20px}
+iframe{margin-bottom: 60px; padding: 20px; max-width: 100%;}
