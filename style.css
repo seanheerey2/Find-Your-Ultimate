@@ -13,15 +13,14 @@ margin: 0;
 text-transform: uppercase;}
 
 h2, h3 {
-
 margin: 20px auto;
 padding: 20px;
 background: #DCDCDC;
 border-radius: 10px;}
 
-table {width: 70%; margin: auto;}
-td {padding: 20px;vertical-align: middle;}
-img {border-radius: 8px; width: 500px; max-width: 100%; height: auto;}
+table {width: 100%; max-width: 1000px; margin: 20px auto;}
+td {padding: 15px;vertical-align: middle;}
+img {border-radius: 8px; width: 500px; max-width: 200px; margin: 0 auto; height: auto;}
 
 input, select {
 width: 100%;
