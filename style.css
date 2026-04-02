@@ -1,4 +1,4 @@
-/* Apply this to everything to prevent padding from breaking widths */
+/* 1. RESET & GLOBAL STYLES */
 * {
   box-sizing: border-box;
 }
@@ -10,47 +10,45 @@ body {
   background-color: #f4f7f6;
   text-align: center;
   color: #546e7a;
+  line-height: 1.6;
 }
 
+/* 2. HEADERS (Responsive) */
 h1 {
   color: #E5E4E2;
   background-color: #546e7a; 
-  /* Scalable font size: 8vw means 8% of the screen width */
-  font-size: clamp(2.5rem, 8vw, 5rem); 
+  font-size: clamp(2rem, 8vw, 4rem); /* Shrinks for mobile, grows for laptop */
   letter-spacing: 2px;
   line-height: 1.2;
-  padding: 10% 5%; /* Relative padding looks better on all screens */
+  padding: 60px 20px;
   margin: 0; 
-  text-align: center;
   text-transform: uppercase;
 }
 
-h2 { font-size: 1.5rem; letter-spacing: 1px; margin-top: 20px; }
-h3 { font-size: 1.8rem; letter-spacing: 1px; }
+h2 { color: #546e7a; font-size: 1.5rem; margin-top: 30px; }
 
 p {
-  font-family: Arial, sans-serif; 
-  font-weight: 700; /* 1000 is often not supported; 700 is standard Bold */
+  font-family: Arial, sans-serif;
   font-size: 1.1rem;
-  line-height: 1.6;
   max-width: 800px;
   margin: 20px auto;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
-/* Layout Containers */
+/* 3. LAYOUT CONTAINERS */
 .container {
-  width: 95%;
-  max-width: 900px;
+  width: 90%;
+  max-width: 800px; /* Better size for readability */
   margin: 40px auto;
   background-color: #E5E4E2;
   border-radius: 15px;
-  padding: 5%;
+  padding: 30px;
+  text-align: center;
 }
 
 table {
-  width: 100%;          
-  max-width: 1200px;    
+  width: 100%;
+  max-width: 1000px;
   margin: 20px auto;
   border-collapse: collapse;
 }
@@ -60,47 +58,73 @@ td {
   vertical-align: middle;
 }
 
+/* 4. MULTIMEDIA & IMAGES */
 img {
   border-radius: 8px;
-  width: 100%; /* Fixed missing semicolon here */
-  max-width: 100%; /* Changed from 600% to 100% to stay in bounds */
+  width: 100%;
+  max-width: 600px;
   height: auto;
   display: block;
-  margin: 10px auto;
+  margin: 0 auto;
 }
 
-/* Media/Forms */
 iframe {
   width: 100%;
-  max-width: 800px;
+  max-width: 100%;
   aspect-ratio: 16 / 9;
+  border-radius: 8px;
   border: none;
+  margin-bottom: 20px;
+}
+
+/* 5. FORMS & INTERACTIVITY (For your JS requirements) */
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
 }
 
 input, select {
   width: 100%; 
   padding: 12px;
-  margin: 10px 0;
+  margin-top: 5px;
+  border: 1px solid #DCDCDC;
   border-radius: 5px;
-  border: 1px solid #ccc;
 }
 
-/* --- Responsive Adjustments --- */
+button {
+  background-color: #546e7a;
+  color: white; 
+  padding: 15px 20px;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
+button:hover { background-color: #3d515a; }
+
+#displayResult {
+  margin-top: 20px;
+  padding: 15px;
+  font-weight: bold;
+}
+
+/* 6. RESPONSIVE QUERIES */
 @media screen and (max-width: 768px) {
-  /* Stack table cells vertically on mobile */
   td {
     display: block;
     width: 100%;
-    text-align: center;
   }
   
-  h1 {
-    padding: 40px 10px;
+  .container {
+    width: 95%;
+    padding: 15px;
   }
 
-  .container {
-    padding: 20px;
-    margin: 20px auto;
-  }
+  h1 { padding: 40px 10px; }
 }
