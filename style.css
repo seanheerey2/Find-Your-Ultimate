@@ -1,0 +1,61 @@
+body {
+font-family: 'Arial Black', Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f4f7f6;
+text-align: center;}
+
+h1 {
+color: #E5E4E2;
+background-color: #546e7a; 
+font-size: 500%; 
+letter-spacing: 2px;
+line-height: 1.1; /* Adjusted slightly so letters don't overlap on small screens */
+padding: 60px 20px;
+margin: 0; 
+text-align: center;}
+
+h2 {color:#546e7a; font-size: 140%; letter-spacing: 2px}
+h3 {color:#546e7a; font-size: 180%; letter-spacing: 2px}
+p {color:#546e7a; font-family: Arial, sans-sarif; font-weight: 1000; font-size: 180%}
+
+
+table {
+width: 95%;          
+max-width: 1000px;    
+margin: 20px auto;
+border-collapse: collapse;}
+
+td {
+padding: 15px;
+vertical-align: middle;
+width: 50%;}
+
+img {
+border-radius: 4px; 
+max-width: 100%;     
+height: auto;
+display: block;
+margin: 0 auto;}
+
+.container {
+max-width: 500px;
+width: 90%;          
+margin: 0 auto;
+background-color: #E5E4E2;
+border-radius: 15px;
+padding: 20px;
+box-sizing: border-box;}
+
+input, select {width: 100%; box-sizing: border-box;}
+
+iframe {
+width: 95%;
+max-width: 800px;
+height: auto;
+aspect-ratio: 16 / 9;}
+
+
+@media screen and (max-width: 768px) {
+td {display: block;width: 100%;}
+h1 {font-size: 250%;}}
