@@ -1,6 +1,4 @@
-
-
-
+/* 1. BODY */
 body {
   font-family: 'Arial Black', Arial, sans-serif;
   margin: 0;
@@ -9,13 +7,16 @@ body {
   text-align: center;
   color: #546e7a;
   line-height: 1.6;
+  /* Standard base size */
+  font-size: 100%; 
 }
 
-/* 2. HEADERS (Responsive) */
+/* 2. HEADERS */
 h1 {
   color: #E5E4E2;
   background-color: #546e7a; 
-  font-size: clamp(2rem, 8vw, 4rem); /* Shrinks for mobile, grows for laptop */
+  /* Large for Laptop */
+  font-size: 350%; 
   letter-spacing: 2px;
   line-height: 1.2;
   padding: 60px 20px;
@@ -23,97 +24,39 @@ h1 {
   text-transform: uppercase;
 }
 
-h2 { color: #546e7a; font-size: 1.5rem; margin-top: 30px; }
+h2 { 
+  color: #546e7a; 
+  font-size: 150%; /* 1.5x bigger than normal text */
+  margin-top: 30px; 
+}
 
 p {
   font-family: Arial, sans-serif;
-  font-size: 1.1rem;
+  /* Slightly larger for readability */
+  font-size: 110%; 
   max-width: 800px;
   margin: 20px auto;
   padding: 0 20px;
 }
 
-/* 3. LAYOUT CONTAINERS */
-.container {
-  width: 90%;
-  max-width: 800px; /* Better size for readability */
-  margin: 40px auto;
-  background-color: #E5E4E2;
-  border-radius: 15px;
-  padding: 30px;
-  text-align: center;
-}
+/* ... keep your layout/multimedia code the same ... */
 
-table {
-  width: 100%;
-  max-width: 1000px;
-  margin: 20px auto;
-  border-collapse: collapse;
-}
-
-td {
-  padding: 15px;
-  vertical-align: middle;
-}
-
-/* 4. MULTIMEDIA & IMAGES */
-img {
-  border-radius: 8px;
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-iframe {
-  width: 70%;
-  max-width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 8px;
-  border: none;
-  margin-bottom: 20px;
-}
-
-/* 5. FORMS & INTERACTIVITY (For your JS requirements) */
-label {
-  display: block;
-  margin-top: 15px;
-  font-weight: bold;
-}
-
-input, select {
-  width: 100%; 
-  padding: 12px;
-  margin-top: 5px;
-  border: 1px solid #DCDCDC;
-  border-radius: 5px;
-}
-
-button {
-  background-color: #546e7a;
-  color: white; 
-  padding: 15px 20px;
-  margin-top: 20px;
-  width: 100%;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover { background-color: #3d515a; }
-
-#displayResult {
-  margin-top: 20px;
-  padding: 15px;
-  font-weight: bold;
-}
-
-/* 6. RESPONSIVE QUERIES */
+/* 6. RESPONSIVE QUERIES (The Fix for Phones) */
 @media screen and (max-width: 768px) {
+  h1 { 
+    /* Shrinks the title so it doesn't take up the whole phone screen */
+    font-size: 200%; 
+    padding: 40px 10px; 
+  }
+
+  h2 {
+    font-size: 130%;
+  }
+
+  p {
+    font-size: 100%; /* Standard size is better for small phone screens */
+  }
+
   td {
     display: block;
     width: 100%;
@@ -123,6 +66,4 @@ button:hover { background-color: #3d515a; }
     width: 95%;
     padding: 15px;
   }
-
-  h1 { padding: 40px 10px; }
 }
