@@ -35,7 +35,6 @@ var teamList = [
 { name: "UG (Galway) Mixed", type: "College", cat: "Mixed", lat: 53.2821, long: -9.0621 }
 ];
 
-
 function getLocation() {var personName = document.getElementById("fname").value; if (personName == ""){ 
 document.getElementById("displayResult").innerHTML = "Please enter your name."; return;}
 if (navigator.geolocation) {navigator.geolocation.getCurrentPosition(showPosition);} 
@@ -57,7 +56,6 @@ if (closestMatch != null) {document.getElementById("displayResult").innerHTML =
 "<h3>Hi " + document.getElementById("fname").value + "!</h3>" +
 "<p>The best ultimate frisbee team for you is: <b>" + closestMatch.name + "</b></p>";} 
 else {document.getElementById("displayResult").innerHTML = "<p>Sorry, no match found.</p>";}}
-
 
 function myFunction1() {
 var x = document.getElementById("answer1");
