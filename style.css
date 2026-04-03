@@ -23,11 +23,11 @@ text-transform: uppercase;}
 h2 { color: #546e7a; font-size: 1.5rem; margin-top: 30px; }
 
 p {
-  font-family: Arial, sans-serif;
-  font-size: 1.1rem;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 0 20px;}
+font-family: Arial, sans-serif;
+font-size: 1.1rem;
+max-width: 800px;
+margin: 20px auto;
+padding: 0 20px;}
 
 
 .container {
@@ -46,7 +46,6 @@ margin: 20px auto;
 border-collapse: collapse;}
 
 td {padding: 15px; vertical-align: middle;}
-
 
 img {
 border-radius: 8px;
@@ -98,6 +97,6 @@ button:hover {background-color: #3d515a;}
 td {display: block; width: 100%;}
 .container {
 width: 95%;
-padding: 15px;}
+padding: 15px;}}
 
 h1 {padding: 40px 10px;}}
