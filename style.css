@@ -1,69 +1,88 @@
-/* 1. BODY */
+/* GENERAL STYLES */
 body {
-  font-family: 'Arial Black', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f7f6;
-  text-align: center;
-  color: #546e7a;
-  line-height: 1.6;
-  /* Standard base size */
-  font-size: 100%; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    text-align: center;
+    color: #546e7a;
 }
 
-/* 2. HEADERS */
 h1 {
-  color: #E5E4E2;
-  background-color: #546e7a; 
-  /* Large for Laptop */
-  font-size: 350%; 
-  letter-spacing: 2px;
-  line-height: 1.2;
-  padding: 60px 20px;
-  margin: 0; 
-  text-transform: uppercase;
+    color: #E5E4E2;
+    background-color: #546e7a;
+    font-size: 48px;
+    padding: 60px 20px;
+    margin: 0;
+    text-transform: uppercase;
 }
 
-h2 { 
-  color: #546e7a; 
-  font-size: 150%; /* 1.5x bigger than normal text */
-  margin-top: 30px; 
+/* REPLACING YOUR INLINE DIVS */
+.hero-box {
+    background-color: #E5E4E2;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px;
 }
 
-p {
-  font-family: Arial, sans-serif;
-  /* Slightly larger for readability */
-  font-size: 110%; 
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 0 20px;
-}
-
-/* ... keep your layout/multimedia code the same ... */
-
-/* 6. RESPONSIVE QUERIES (The Fix for Phones) */
-@media screen and (max-width: 768px) {
-  h1 { 
-    /* Shrinks the title so it doesn't take up the whole phone screen */
-    font-size: 200%; 
-    padding: 40px 10px; 
-  }
-
-  h2 {
-    font-size: 130%;
-  }
-
-  p {
-    font-size: 100%; /* Standard size is better for small phone screens */
-  }
-
-  td {
+.nav-card {
+    text-decoration: none;
     display: block;
+    background-color: #E5E4E2;
+    padding: 20px;
+    border-radius: 15px;
+    color: inherit;
+}
+
+/* VIDEO FIX */
+iframe {
+    width: 90%;
+    max-width: 600px; /* Prevents full-screen takeover on laptop */
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    border: none;
+    display: block;
+    margin: 20px auto;
+}
+
+.video-label {
+    background-color: #E5E4E2;
+    padding: 10px 20px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 10px;
+}
+
+/* TABLE LAYOUT FIX */
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 20px;
+    width: 50%;
+}
+
+img {
     width: 100%;
-  }
-  
-  .container {
-    width: 95%;
-    padding: 15px;
-  }
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+    h1 { font-size: 28px; padding: 40px 10px; }
+    
+    /* Forces the table to become a single column on phones */
+    td {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .hero-box { padding: 15px; margin: 10px; }
+    
+    iframe { width: 95%; }
 }
